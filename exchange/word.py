@@ -9,9 +9,7 @@ def word(file):
     word1 = f.readline().rstrip()
 
   form1 = query(word)
-  print(form1, 'form1')
   form = query(word1)
-  print(form, 'form')
   pr = re.split('\W+', setning)
   val = pr
   for i in pr:
@@ -22,7 +20,7 @@ def word(file):
   senda = ' '.join(val)
   with open('newtext.txt', 'w') as g:
     g.write(senda)
-  print(senda)
+  return
 
 
 def query(word):
@@ -35,9 +33,9 @@ def query(word):
     for row in elem:
       form.append(row.text)
     return (form)
-  else:
+  else:  # Ef orð eru tvíræð og þarf að skrapa aðra síðu
     for i in s.find_all('li'):
-      if i.text.endswith('nafnorð'):
+      if i.text.endswith('nafnorð'): #Velja það orð sem endar á nafnorð (Kvennkyns, Hvorukyns eða Karlkyns)
         rb = i.a.get('href')
         r = requests.post('http://bin.arnastofnun.is/'+ rb)
         s = bs4.BeautifulSoup(r.text)
