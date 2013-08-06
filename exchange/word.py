@@ -7,7 +7,7 @@ def word(file):
     setning = f.readline().rstrip()
     word = f.readline().rstrip()
     word1 = f.readline().rstrip()
-  
+
   form1 = query(word)
   print(form1, 'form1')
   form = query(word1)
