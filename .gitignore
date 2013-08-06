@@ -19,6 +19,7 @@ lib
 lib64
 ENV
 venv
+.DS_Store
 
 # Installer logs
 pip-log.txt
