@@ -1,0 +1,5 @@
+ENV
+venv
+source
+.pyc
+.DS_Store
