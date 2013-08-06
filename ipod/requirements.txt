@@ -1,2 +1,0 @@
-distribute==0.6.31
-stagger==0.4.2

@@ -1,4 +1,0 @@
-octo
-====
-
-Octo hecta
